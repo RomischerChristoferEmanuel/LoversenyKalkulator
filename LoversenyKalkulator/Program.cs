@@ -35,10 +35,10 @@ for (int i = 1; i <= 4; i++)
         vegosszeg.Add(osszeg);
     }
 
-    for (i = 1; i <= 4; i++)
+    for (i = 0; i < 4; i++)
     {
         Console.WriteLine("Rögzített bérleti díjak:");
-        Console.WriteLine($"\t- {i}. bérlés adatai: {vegosszeg[i]}");
+        Console.WriteLine($"\t- {i+1}. bérlés adatai: {vegosszeg[i]} Ft");
 
     }
 
@@ -47,7 +47,7 @@ for (int i = 1; i <= 4; i++)
     napteljes += vegosszeg[i];
     Console.WriteLine($"Napi teljes bevétel: {napteljes} Ft");
     atlag = napteljes / 4;
-    Console.WriteLine($"Átlagos bérleti díj: {atlag} Ft");
+    Console.WriteLine($"Átlagos bérleti díj: {atlag:F0} Ft");
 
     if (napteljes >= 200000)
     {
